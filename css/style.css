@@ -240,6 +240,8 @@ h3{
 
 .carta p{
     padding-top: 5px;
+    width: 245px;
+    margin: auto;
 }
 
 .carta .btn-carta{
@@ -408,7 +410,7 @@ h3{
     padding: 10px 10px 10px 10px;
     position: absolute;
     bottom: 17.3rem;
-    right: 10.4rem;
+    right: 10.2rem;
 }
 
 .comida a:hover{
