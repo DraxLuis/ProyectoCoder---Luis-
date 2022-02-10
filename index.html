@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="shortcut icon" href="./img/loader.gif">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -44,7 +46,7 @@
         <div class="contenedor-titulo">
             <h2>MÁS VENDIDO</h2>
         </div>
-        <div class="contenedor-seccion">
+        <div class="contenedor-seccion" data-aos="fade-up">
             <a href="./paginas/Comida.html" class="carta">
                 <div class="carta-imagen car-1"></div>
                 <h2>HAMBURGUESA</h2>
@@ -83,7 +85,7 @@
             </a>
         </div>
     </section>
-    <section class="seccion-imagen">
+    <section class="seccion-imagen" data-aos="fade-right">
         <div class="texto-abajo">
             <h2>Disfruta de una buena hamburguesa</h2>
             <p>Ordena ahora, o contactanos si tienes alguna duda, no lo dudes!</p>
@@ -95,7 +97,7 @@
         <div class="contenedor-titulo">
             <h2>OPINIONES</h2>
         </div>
-        <div class="review-seccion">
+        <div class="review-seccion" data-aos="fade-down">
             <div class="testimoniales">
                 <div class="testimonial-texto">
                     <div class="testi-imagen rev-1"></div>
@@ -164,6 +166,9 @@
         <img width="150px" src="img/loader.gif" alt="loader">
     </div>
     <script src="./javascript/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
