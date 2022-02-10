@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactacto</title>
+</head>
+
+<body class="preload">
+    <header>
+        <div>
+            <nav>
+                <ul class="nav-bar">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="Comida.html">Menu</a>
+                        <ul class="menu-vertical">
+                            <li><a href="Comida.html">Comida</a></li>
+                            <li><a href="Jugos.html">Jugos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form>
+            <div class="contacto-section">
+                <div class="contenedor-contacto">
+                    <h1>Contáctanos!</h1>
+                    <input type="text" class="nombre" placeholder="Nombre" required>
+                    <input type="text" class="apellido" placeholder="Apellido" required>
+                    <input type="number" class="numero" placeholder="Teléfono" required>
+                    <input type="email" class="email" placeholder="example@gmail.com" required>
+                    <textarea rows="1" placeholder="Comentario" class="mensaje"></textarea>
+                    <input type="submit" class="boton-about" value="Enviar">
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer class="footer-pagina">
+        <div class="icono">
+            <a href="https://whatsapp.com" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <div class="icono-texto">
+                <p>Todos los derechos reservados 2021 ©</p>
+            </div>
+        </div>
+    </footer>
+    <div class="contenedor-loader">
+        <img width="150px" src="../img/loader.gif" alt="loader">
+    </div>
+    <script src="../javascript/main.js"></script>
+</body>
