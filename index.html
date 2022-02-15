@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="shortcut icon" href="./img/loader.gif">
@@ -17,30 +19,40 @@
 </head>
 
 <body class="preload">
-    <header>
-        <div>
-            <nav>
-                <ul class="nav-bar">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="./paginas/Comida.html">Menu</a>
-                        <ul class="menu-vertical">
-                            <li><a href="./paginas/Comida.html">Comida</a></li>
-                            <li><a href="./paginas/Jugos.html">Jugos</a></li>
-                        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-black">
+        <div class="container-fluid">
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nv-ca">
+                    <li class="nav-item n1">
+                        <a class="nav-link active text-white" aria-current="page" href="./paginas/Comida.html">Comida</a>
                     </li>
-                    <li><a href="./paginas/Contacto.html">Contacto</a></li>
-                    <li><a href="./paginas/Nosotros.html">Nosotros</a></li>
+                    <li class="nav-item n2">
+                        <a class="nav-link text-white" href="./paginas/Jugos.html">Jugos</a>
+                    </li>
+                    <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+                    <li class="nav-item">
+                        <a class="nav-link text-white n3" href="./paginas/Contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="./paginas/Nosotros.html">Nosotros</a>
+                    </li>
                 </ul>
-            </nav>
-        </div>
-        <div class="hero-imagen">
-            <div class="hero-texto">
-                <h1>¡NO ESPERES, ORDENA YA!</h1>
-                <p>Las mejores hamburguesas de la ciudad tenemos <br> atención al cliente rápida y delivery profesional
-                </p>
-                <a href="./paginas/Comida.html" class="button">Ordena</a>
             </div>
         </div>
+    </nav>
+    <div class="hero-imagen">
+        <div class="hero-texto">
+            <h1>¡NO ESPERES, ORDENA YA!</h1>
+            <p>Las mejores hamburguesas de la ciudad tenemos <br> atención al cliente rápida y delivery profesional
+            </p>
+            <a href="./paginas/Comida.html" class="button">Ordena</a>
+        </div>
+    </div>
     </header>
     <section class="ctn-p--g">
         <div class="contenedor-titulo">
@@ -50,7 +62,8 @@
             <a href="./paginas/Comida.html" class="carta">
                 <div class="carta-imagen car-1"></div>
                 <h2>HAMBURGUESA</h2>
-                <p>Deliciosa hamburguesa, contiene carne, tomate, cebolla y lechuga. Además trae papas fritas adicionales.</p>
+                <p>Deliciosa hamburguesa, contiene carne, tomate, cebolla y lechuga. Además trae papas fritas
+                    adicionales.</p>
                 <h2 class="btn-carta">VER MÁS</h2>
             </a>
             <a href="./paginas/Comida.html" class="carta">
@@ -62,13 +75,15 @@
             <a href="./paginas/Comida.html" class="carta">
                 <div class="carta-imagen car-3"></div>
                 <h2>PARRILLA</h2>
-                <p>Que más delicioso que una carne a la parrilla!, trae incluido papas fritas, verduras, arroz, entre otros.</p>
+                <p>Que más delicioso que una carne a la parrilla!, trae incluido papas fritas, verduras, arroz, entre
+                    otros.</p>
                 <h2 class="btn-carta">VER MÁS</h2>
             </a>
             <a href="./paginas/Comida.html" class="carta">
                 <div class="carta-imagen car-4"></div>
                 <h2>H. DE TOCINO</h2>
-                <p>Hamburguesa de Tocino, a opción del cliente se puede añadir queso, o piña dependiendo de los gustos</p>
+                <p>Hamburguesa de Tocino, a opción del cliente se puede añadir queso, o piña dependiendo de los gustos
+                </p>
                 <h2 class="btn-carta">VER MÁS</h2>
             </a>
             <a href="./paginas/Comida.html" class="carta">
@@ -80,7 +95,8 @@
             <a href="./paginas/Comida.html" class="carta">
                 <div class="carta-imagen car-6"></div>
                 <h2>H. DE RES</h2>
-                <p>Hamburguesa de Res, viene incluido pepinillo y queso a gusto propio del cliente, además de papas al hilo.</p>
+                <p>Hamburguesa de Res, viene incluido pepinillo y queso a gusto propio del cliente, además de papas al
+                    hilo.</p>
                 <h2 class="btn-carta">VER MÁS</h2>
             </a>
         </div>
@@ -93,55 +109,80 @@
         <a href="./paginas/Contacto.html" class="button btn-abajo">CONTACTO</a>
     </section>
 
-    <section>
-        <div class="contenedor-titulo">
+    <section class="testimonials" id="testimonials">
+        <div class="contenedor-titulo pb-3">
             <h2>OPINIONES</h2>
         </div>
-        <div class="review-seccion" data-aos="fade-down">
-            <div class="testimoniales">
-                <div class="testimonial-texto">
-                    <div class="testi-imagen rev-1"></div>
-                    <h3>EZEQUIEL</h3>
-                    <div class="icono-estrella">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>Muy buena atención, siempre me recomendaron esta hamburguesería, muy rica comida y las bebidas estuvieron excelentes</p>
+          <div class="row justify-content-center  me-0">
+            <div class="col-lg-8 col-xl-7">
+              <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <li data-bs-target="#carousel1" data-bs-slide-to="0" class="active bg-danger"></li>
+                  <li data-bs-target="#carousel1" data-bs-slide-to="1" class="bg-danger"></li>
+                  <li data-bs-target="#carousel1" data-bs-slide-to="2" class="bg-danger"></li>
                 </div>
-            </div>
-            <div class="testimoniales">
-                <div class="testimonial-texto">
-                    <div class="testi-imagen rev-2"></div>
-                    <h3>JOSÉ</h3>
-                    <div class="icono-estrella">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="carousel-inner p-1">
+                  <div class="testi-item tst-bg carousel-item active shadow-sm rounded p-4 mb-5">
+                    <div class="testi-author-info d-flex align-items-center">
+                      <img src="img/1.jpg" class="img-thumbnail rounded-circle" alt="">
+                      <div class="author ms-3">
+                        <h3 class="fs-6 mb-1 text-white">Ezequiel</h3>
+                        <p class="text-white m-0">Cliente</p>
+                      </div>
                     </div>
-                    <p>Excelente servicio, buena comida, 100% recomendado, me atendieron rápido sin mucho rodeo y me sirvieron la comida en 10 minutos después del pedido</p>
-                </div>
-            </div>
-            <div class="testimoniales">
-                <div class="testimonial-texto">
-                    <div class="testi-imagen rev-3"></div>
-                    <h3>LUCÍA</h3>
-                    <div class="icono-estrella">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <p class="text-white mt-3">Muy buena atención, siempre me recomendaron esta hamburguesería, muy rica comida y las bebidas estuvieron excelentes
+                    </p>
+                    <div class="ratings">
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
                     </div>
-                    <p>Interesante carta, me han recomendado mucho esta hamburguesería, me dijeron que se destaca por tener hamburguesas con muy buen sabor, y lo comprobé por mi cuenta.</p>
+                  </div>
+                  <div class="testi-item tst-bg carousel-item shadow-sm rounded p-4 mb-5">
+                    <div class="testi-author-info d-flex align-items-center">
+                      <img src="img/2.jpg" class="img-thumbnail rounded-circle" alt="">
+                      <div class="author ms-3">
+                        <h3 class="fs-6 mb-1 text-white">Reyna</h3>
+                        <p class="text-white m-0">Cliente</p>
+                      </div>
+                    </div>
+                    <p class="text-white mt-3">Excelente servicio, buena comida, 100% recomendado, me atendieron rápido sin mucho rodeo y me sirvieron la comida en 10 minutos después del pedido
+
+                    </p>
+                    <div class="ratings">
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="testi-item tst-bg carousel-item shadow-sm rounded p-4 mb-5">
+                    <div class="testi-author-info d-flex align-items-center">
+                      <img src="img/3.jpg" class="img-thumbnail rounded-circle" alt="">
+                      <div class="author ms-3">
+                        <h3 class="fs-6 mb-1">Daniel</h3>
+                        <p class="text-white m-0">Cliente</p>
+                      </div>
+                    </div>
+                    <p class="text-white mt-3">Interesante carta, me han recomendado mucho esta hamburguesería, me dijeron que se destaca por tener hamburguesas con muy buen sabor, y lo comprobé por mi cuenta.
+
+                    </p>
+                    <div class="ratings">
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                      <i class="fas fa-star text-danger"></i>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
+      </section>
 
     <footer class="footer-pagina">
         <div class="icono">
@@ -169,6 +210,9 @@
     <script>
         AOS.init();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

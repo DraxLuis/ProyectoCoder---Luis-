@@ -201,6 +201,7 @@ h3{
     text-align: center;
     border: 2px solid #ffffff;
     transition: all 0.25s ease;
+    max-height: 399px;
 }
 
 .carta-imagen{
@@ -242,6 +243,7 @@ h3{
     padding-top: 5px;
     width: 245px;
     margin: auto;
+    color: #000;
 }
 
 .carta .btn-carta{
@@ -258,6 +260,7 @@ h3{
 
 .carta:hover{
     transform: scale(1.07);
+    color: #000;
 }
 
 /**SECCION-IMAGEN**/
@@ -285,58 +288,16 @@ h3{
     margin-top: 10rem;
     margin-left: 4rem;
 }
-
-/**REVIEWS**/
-
-.review-seccion{
-    display:flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 2rem;
+.btn-abajo:hover{
+    color: #fff;
 }
 
-.icono-estrella i{
-    color: gold;
-    margin: 10px auto 10px auto;
-}
-
-.testimoniales{
-    width: 330px;
-    margin: 10px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.tst-bg{
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 5px;
 }
 
-.testi-imagen{
-    width: 165px;
-    height: 160px;
-    border-radius: 100%;
-    background-size: cover;
-    margin: auto;
-    margin-bottom: 10px;
-}
-
-.testimonial-texto{
-    margin-bottom: 15px; 
-}
-
-.testimonial-texto p{
-    margin: auto;
-    width: 250px;
-    font-weight: 400;
-    font-size: 15px;
-}
-
-.rev-1{
-    background-image: url(../img/review-1.jpg);
-}
-.rev-2{
-    background-image: url(../img/review-2.png);
-}
-.rev-3{
-    background-image: url(../img/review-3.jpg)
+.button:hover{
+    color: #fff;
 }
 
 /**COMIDAS**/
@@ -353,7 +314,7 @@ h3{
 .comida-titulo{
     display:grid;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 5.5rem;
     margin-bottom: 1.5rem;
     font-size: 18px;
 }
@@ -409,8 +370,8 @@ h3{
     border-radius: 5px;
     padding: 10px 10px 10px 10px;
     position: absolute;
-    bottom: 17.3rem;
-    right: 10.2rem;
+    bottom: 16.8rem;
+    right: 9.2rem;
 }
 
 .comida a:hover{
@@ -508,7 +469,7 @@ h3{
     height: 560px;
     width: 1063px;
     max-width: 95%;
-    margin: 0 auto;
+    margin: 4rem auto 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -567,14 +528,13 @@ h3{
     display: flex;
     background:white;
     border-radius: 5px;
-    height: 370px;
-    width: 840px;
+    width: 800px;
     margin: 2rem auto;
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 
 .contenedor-contacto{
-    max-width: 600px;
+    max-width: 690px;
     margin: auto;
     padding: 0 20px;
 }
@@ -588,29 +548,12 @@ h3{
     font-weight: 400;
 }
 
-.nombre,.email,.mensaje,.apellido,
-.numero{
-    background: none;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid;
-    color: #888;
-    padding: 10px 6px;
-    font-size: 14px;
-    margin-bottom: 40px;
-}
-
 .apellido{
     width: 270px;
 }
 
 .numero{
-    width: 270px;
-    margin-right: 30px;
-}
-
-.nombre{
-    width: 270px;
+    width: 300px;
     margin-right: 30px;
 }
 
@@ -624,7 +567,37 @@ h3{
     overflow: hidden;
 }
 
+.dr-1:hover{
+    background: black;
+}
+
+.nv-ca{
+    margin: auto;
+}
+
+.n1{
+    margin-right: 10px;
+}
+
+.n2{
+    margin-right: 10px;
+}
+
+.n3{
+    margin-right: 10px;
+}
+
+.nv-ca img{
+    margin-left: 10px;
+}
+
 /**MEDIA QUERIES**/
+
+@media screen and (max-width:991px){
+    .nv-ca img{
+        display: none;
+    }
+}
 
 @media screen and (max-width: 1024px){
     .contenedor-seccion{
@@ -666,6 +639,9 @@ h3{
     }
     .review-seccion{
         flex-wrap: wrap;
+    }
+    .nv-ca img{
+        display: none;
     }
 }
 
@@ -727,6 +703,7 @@ h3{
     .boton-about{
         margin-top: 20px;
     }
+
 }
 
 @media screen and (max-width: 425px){
