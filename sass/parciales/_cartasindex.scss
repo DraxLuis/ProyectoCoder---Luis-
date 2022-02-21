@@ -1,0 +1,92 @@
+.ctn-p--g{
+    display: grid;
+    grid-template-areas: "titulo" "c1";
+}
+
+.contenedor-titulo{
+    grid-area: titulo;
+    display:flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.contenedor-seccion{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-area: c1;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.carta{
+    color: black;
+    background-color:white;
+    width: 270px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #ffffff;
+    transition: all 0.25s ease;
+    max-height: 399px;
+    & h2{
+        font-size: 21px;
+        padding: 5px;
+    }
+    & p{
+        padding-top: 5px;
+        width: 245px;
+        margin: auto;
+        color: #000;
+    }
+    
+    & .btn-carta{
+        background-color: #000;
+        color: #ffffff;
+        padding: 10px 20px;
+        display: block;
+        text-align: center;
+        border: 2px solid #ffffff;
+        border-radius: 0 0 15px 15px;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    
+    &:hover{
+        transform: scale(1.07);
+        color: #000;
+    }
+}
+
+.carta-imagen{
+    height: 150px;
+    margin-bottom: 15px;
+    background-size:cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.car-1{
+    background-image: url(../img/burger.jpg);
+}
+
+.car-2{
+    background-image: url(../img/Hamburguesa_piña.jpg);
+}
+
+.car-3{
+    background-image: url(../img/polloplancha.jfif);
+}
+
+.car-4{
+    background-image: url(../img/hamburguesa_tocino.jpg);
+}
+
+.car-5{
+    background-image: url(../img/hamburguesa_chorizo.jpg);
+}
+
+.car-6{
+    background-image: url(../img/hamburguesa_res.jpg)
+}
+

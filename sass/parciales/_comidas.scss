@@ -1,0 +1,142 @@
+/**COMIDAS**/
+.subtitulo-comida{
+    color: #fff;
+    font-size: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    background: #ff9900;
+    padding: 13px 30px;
+    border-radius: 15px;
+}
+
+.comida-titulo{
+    display:grid;
+    justify-content: center;
+    margin-top: 5.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+}
+.comida-section{
+    display:grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 345px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.comida{
+    position: relative;
+    width: 260px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    & i{
+        margin-top: 10px;
+        color: gold;
+        width: 25px;
+    }
+    & a{
+        margin-top: 10px;
+        color: #ffffff;
+        background-color: #000;
+        padding: 10px 20px 10px 20px;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        display: inline-block;
+        font-size: 17px;
+        transition: all 0.25s ease;
+    }
+    & a:hover{
+        transform: scale(1.07);
+        color:#000;
+        background: white;
+    }
+}
+
+.img-comida{
+    background-color: cyan;
+    height: 200px;
+    margin-bottom: 10px;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.money{
+    color:white;
+    font-weight: bold;
+    display: inline-block;
+    background-color: rgb(247, 57, 57);
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    bottom: 16.8rem;
+    right: 9.2rem;
+}
+
+.h-normal{
+    background-image: url(../img/comida/hamburguesanormal.png);
+}
+.h-tocino{
+    background-image: url(../img/comida/hamburguesatocino.png);
+}
+.h-tropical{
+    background-image: url(../img/comida/hamburguesatropical.png);
+}
+.parrilla{
+    background-image: url(../img/comida/carnealaparrilla.png);
+}
+.h-chorizo{
+    background-image: url(../img/comida/hamburguesachorizo.png);
+}
+.h-queso{
+    background-image: url(../img/comida/hamburguesaconqueso.png);
+}
+.h-res{
+    background-image: url(../img/comida/hamburguesares.png);
+}
+.h-royal{
+    background-image: url(../img/comida/hamburguesaroyal.png);
+}
+.h-parillera{
+    background-image: url(../img/comida/hamburguesaparrilla.png);
+}
+
+/**Jugos**/
+
+.j-fresa{
+    background-image: url(../img/jugos/jugodefresa.png);
+}
+
+.j-manzana{
+    background-image: url(../img/jugos/limonadademanzana.png);
+}
+
+.j-piña{
+    background-image: url(../img/jugos/limonada-de-piña.png);
+}
+
+.j-maracuya{
+    background-image: url(../img/jugos/jugodemaracuya.png);
+}
+
+.j-papaya{
+    background-image: url(../img/jugos/jugo-de-papaya.png);
+}
+
+.j-naranja{
+    background-image: url(../img/jugos/jugo-de-naranja.png);
+}
+
+.zumo{
+    background-image: url(../img/jugos/zumo.png);
+}
+
+.chichamorada{
+    background-image: url(../img/jugos/chichamorada.png);
+}
+
+.l-piña{
+    background-image: url(../img/jugos/jugodepiña.png);
+}
