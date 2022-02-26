@@ -1,21 +1,36 @@
+@import "./vars";
+
 /**Contacto-seccion**/
 
 .contacto-section{
     padding: 80px 0;
-    text-align: center;
+    text-align: map-get($estilos, centro);
     display: flex;
-    background:white;
+    background:map-get($estilos, blanco);
     border-radius: 5px;
     width: 800px;
     margin: 2rem auto;
     margin-top: 6rem;
     & h1{
         font-size: 20px;
-        color: #000;
+        color: map-get($estilos, negro);
         margin-bottom: 40px;
         text-transform: uppercase;
         letter-spacing: 4px;
         font-weight: 400;
+        @include tablet-ajustes{
+            &{
+                text-align: map-get($estilos, centro);
+            }
+        }
+    }
+    @include tablet-ajustes{
+        &{
+            height: 100%;
+            width: calc(100% - 1rem);
+            margin: auto;
+            margin-top: 3rem;
+        }
     }
 }
 
@@ -23,6 +38,14 @@
     max-width: 690px;
     margin: auto;
     padding: 0 20px;
+}
+
+.nombre, .apellido, .numero, .email{
+    @include tablet-ajustes{
+        &{
+            width: 100%;
+        }
+    }
 }
 
 .apellido{
@@ -45,13 +68,23 @@
 }
 
 .dr-1:hover{
-    background: black;
+    background: map-get($estilos, negro);
 }
 
 .nv-ca{
     margin: auto;
     .nv-ca img{
         margin-left: 10px;
+        @include tabletgrande{
+            &{
+                display: none;
+            }
+        }
+        @include tablet{
+            &{
+                display: none;
+            }
+        }
     }
 }
 

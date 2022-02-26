@@ -1,3 +1,5 @@
+@import "./vars";
+
 /**SECCION IMAGEN**/
 
 .seccion-imagen{
@@ -16,6 +18,25 @@
     margin-left: 4rem;
     line-height: 40px;
     justify-content: flex-start;
+    @include tablet{
+        &{
+            line-height:20px;
+        }
+        & h2{
+            font-size: 18px;
+        }
+        & p{
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+    @include laptop{
+        & p{
+            font-size: 14px;
+            margin-bottom: 10px;
+            line-height: 20px;
+        }
+    }
 }
 .btn-abajo{
     font-size: 16px;
@@ -24,7 +45,18 @@
     margin-top: 10rem;
     margin-left: 4rem;
     &:hover{
-        color: #fff;
+        color: map-get($estilos, blanco);
+    }
+    @include tablet{
+        &{
+            margin-top: 10rem;
+            margin-left: 4rem;
+        }
+    }
+    @include phone{
+        &{
+            margin-top: 14rem;
+        }
     }
 }
 
@@ -33,5 +65,5 @@
 }
 
 .button:hover{
-    color: #fff;
+    color: map-get($estilos, blanco);
 }

@@ -1,0 +1,43 @@
+/**MAPS**/
+
+$estilos:(
+    blanco: #fff,
+    cafe: #802629,
+    negro: #000,
+    oro: gold,
+    rojo: rgb(247, 57, 57),
+    centro: center,
+    dorado-claro: #e3e938
+);
+
+/**MIXINS**/
+
+@mixin tabletgrande {
+    @media screen and (max-width:991px){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width:1024px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin tablet-ajustes{
+    @media screen and (max-width:767px){
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width:425px){
+        @content;
+    }
+}

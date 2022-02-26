@@ -1,3 +1,5 @@
+@import "./vars";
+
 .ctn-p--g{
     display: grid;
     grid-template-areas: "titulo" "c1";
@@ -18,16 +20,35 @@
     grid-area: c1;
     margin-top: 1.5rem;
     justify-content: center;
+    @include laptop{
+        &{
+            grid-template-columns: repeat(2, 300px);
+            margin: auto;
+            margin-top: 10px;
+        }
+    }
+    @include tablet{
+        &{
+            grid-template-columns: repeat(2, 300px);
+            margin: auto;
+            margin-top: 10px;
+        }
+     }
+     @include tablet-ajustes{
+        &{
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        }
+     }
 }
 
 .carta{
-    color: black;
-    background-color:white;
+    color: map-get($estilos, negro);
+    background-color:map-get($estilos, blanco);
     width: 270px;
     margin: 10px;
     border-radius: 15px;
     text-align: center;
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     transition: all 0.25s ease;
     max-height: 399px;
     & h2{
@@ -38,12 +59,12 @@
         padding-top: 5px;
         width: 245px;
         margin: auto;
-        color: #000;
+        color: map-get($estilos, negro);
     }
     
     & .btn-carta{
-        background-color: #000;
-        color: #ffffff;
+        background-color: map-get($estilos, negro);
+        color: map-get($estilos, blanco);
         padding: 10px 20px;
         display: block;
         text-align: center;
@@ -55,7 +76,7 @@
     
     &:hover{
         transform: scale(1.07);
-        color: #000;
+        color: map-get($estilos, negro);
     }
 }
 

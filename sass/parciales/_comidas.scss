@@ -1,12 +1,20 @@
+@import "./heronavbarfooter";
+@import "./vars";
+
 /**COMIDAS**/
 .subtitulo-comida{
-    color: #fff;
+    color: map-get($estilos, blanco);
     font-size: 25px;
     text-transform: capitalize;
     letter-spacing: 2px;
     background: #ff9900;
     padding: 13px 30px;
     border-radius: 15px;
+    @include tablet-ajustes{
+        &{
+            margin: auto;
+        }
+    }
 }
 
 .comida-titulo{
@@ -22,36 +30,42 @@
     grid-template-rows: repeat(3, 345px);
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: map-get($estilos, centro);
+    @include tablet-ajustes{
+        &{
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+    }
 }
 
 .comida{
     position: relative;
     width: 260px;
     margin: 10px;
-    color: #fff;
+    color: map-get($estilos, blanco);
     border-radius: 5px;
     padding: 5px;
     & i{
         margin-top: 10px;
-        color: gold;
+        color: map-get($estilos, oro);
         width: 25px;
     }
     & a{
+        @extend .button;
         margin-top: 10px;
-        color: #ffffff;
-        background-color: #000;
-        padding: 10px 20px 10px 20px;
-        border: 2px solid #ffffff;
+        color: map-get($estilos, blanco);
         border-radius: 5px;
-        display: inline-block;
         font-size: 17px;
-        transition: all 0.25s ease;
     }
     & a:hover{
         transform: scale(1.07);
         color:#000;
-        background: white;
+        background: map-get($estilos, blanco);
+    }
+    @include tablet-ajustes{
+        &{
+            margin: auto;
+        }
     }
 }
 
@@ -64,10 +78,10 @@
 }
 
 .money{
-    color:white;
+    color:map-get($estilos, blanco);
     font-weight: bold;
     display: inline-block;
-    background-color: rgb(247, 57, 57);
+    background-color: map-get($estilos, rojo);
     border-radius: 5px;
     padding: 10px 10px 10px 10px;
     position: absolute;

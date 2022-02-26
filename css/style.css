@@ -287,6 +287,7 @@ h3{
     margin-top: 10rem;
     margin-left: 4rem;
 }
+
 .btn-abajo:hover{
     color: #fff;
 }
@@ -512,6 +513,8 @@ h3{
     border-radius: 30px;
     transition: .4s;
 }
+
+
 .boton-about:hover{
     color: #000;
     background: transparent;

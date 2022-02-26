@@ -1,41 +1,28 @@
-/**lista de navegacion**/
-.nav-bar{
-    background-color: #000;
-    display:flex;
-    justify-content: center;
-    text-align: center;
-    & a:hover{
-        color:#802629;
-    }
-    & li:hover .menu-vertical{
-        display: block;
-        z-index: 2;
-    }
-    & li{
-        list-style: none;
-        padding: 15px;
-    }
-    
-    & a{
-        display: block;
+@import "./vars";
+
+.logo-hamb{
+    @include tablet{
+        &{
+            display: none;
+        }
     }
 }
 
 .menu-vertical{
     position: absolute;
     display: none;
-    background-color: #000;
+    background-color: map-get($estilos, negro);
     & a:hover{
-        color:#802629;
+        color:map-get($estilos, cafe);
     }
 }
 
 /**Hero section**/
 
 .button{
-    background-color: #000;
+    background-color: map-get($estilos, negro);
     padding: 10px 20px 10px 20px;
-    border: 2px solid #fff;
+    border: 2px solid map-get($estilos, blanco);
     display: inline-block;
     transition: all 0.25s ease;
     &:hover{
@@ -52,13 +39,23 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    @include tablet{
+        &{
+            background-position: right;
+        }
+    }
 }
 
 .hero-texto{
-    color: #ffffff;
-    text-align: center;
+    color: map-get($estilos, blanco);
+    text-align: map-get($estilos, centro);
     & h1{
         font-size: 50px;
+        @include tablet{
+            &{
+                font-size: 40px;
+            }
+        }
     }
     & p{
         font-size: 30px;
@@ -66,25 +63,39 @@
         line-height: 35px;
         margin-bottom: 2rem;
         margin-top: 1rem;
+        @include tablet{
+            &{
+                font-size: 23px;
+                line-height: 31px;
+            }
+        }
+        @include phone{
+            &{
+                width: 290px;
+                margin: auto;
+                margin-bottom: 2rem;
+                margin-top: 1rem;
+            }
+        }
     }
 }
 
 /**footer**/
 
 .footer-pagina{
-    background-color: #000;
+    background-color: map-get($estilos, negro);
     margin-top: 3rem;
     padding-top: 4rem;
     display:flex;
     justify-content: center;
-    text-align: center;
+    text-align: map-get($estilos, centro);
 }
 
 .icono{
     position: relative;
     bottom: 55px;
     & a{
-        color:white;
+        color:map-get($estilos, blanco);
         width: 50px;
         margin: 0px 15px 0px 15px;
     }

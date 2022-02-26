@@ -1,16 +1,20 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/**MAPS**/
+/**MIXINS**/
 * {
   padding: 0;
   margin: 0; }
 
+/**MAPS**/
+/**MIXINS**/
 body {
   background-color: #0a0a0a;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif; }
 
 a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   font-size: 1.2rem; }
 
@@ -40,22 +44,11 @@ h3 {
   align-items: center;
   z-index: 1000; }
 
-/**lista de navegacion**/
-.nav-bar {
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  text-align: center; }
-  .nav-bar a:hover {
-    color: #802629; }
-  .nav-bar li:hover .menu-vertical {
-    display: block;
-    z-index: 2; }
-  .nav-bar li {
-    list-style: none;
-    padding: 15px; }
-  .nav-bar a {
-    display: block; }
+/**MAPS**/
+/**MIXINS**/
+@media screen and (max-width: 768px) {
+  .logo-hamb {
+    display: none; } }
 
 .menu-vertical {
   position: absolute;
@@ -65,13 +58,13 @@ h3 {
     color: #802629; }
 
 /**Hero section**/
-.button {
+.button, .comida a {
   background-color: #000;
   padding: 10px 20px 10px 20px;
   border: 2px solid #fff;
   display: inline-block;
   transition: all 0.25s ease; }
-  .button:hover {
+  .button:hover, .comida a:hover {
     transform: scale(1.2); }
 
 .hero-imagen {
@@ -83,18 +76,34 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .hero-imagen {
+      background-position: right; } }
 
 .hero-texto {
-  color: #ffffff;
+  color: #fff;
   text-align: center; }
   .hero-texto h1 {
     font-size: 50px; }
+    @media screen and (max-width: 768px) {
+      .hero-texto h1 {
+        font-size: 40px; } }
   .hero-texto p {
     font-size: 30px;
     font-weight: 500;
     line-height: 35px;
     margin-bottom: 2rem;
     margin-top: 1rem; }
+    @media screen and (max-width: 768px) {
+      .hero-texto p {
+        font-size: 23px;
+        line-height: 31px; } }
+    @media screen and (max-width: 425px) {
+      .hero-texto p {
+        width: 290px;
+        margin: auto;
+        margin-bottom: 2rem;
+        margin-top: 1rem; } }
 
 /**footer**/
 .footer-pagina {
@@ -109,7 +118,7 @@ h3 {
   position: relative;
   bottom: 55px; }
   .icono a {
-    color: white;
+    color: #fff;
     width: 50px;
     margin: 0px 15px 0px 15px; }
   .icono a:hover {
@@ -125,6 +134,8 @@ h3 {
 .contenedor-iconos {
   margin: 10px; }
 
+/**MAPS**/
+/**MIXINS**/
 .ctn-p--g {
   display: grid;
   grid-template-areas: "titulo" "c1"; }
@@ -143,15 +154,28 @@ h3 {
   grid-area: c1;
   margin-top: 1.5rem;
   justify-content: center; }
+  @media screen and (max-width: 1024px) {
+    .contenedor-seccion {
+      grid-template-columns: repeat(2, 300px);
+      margin: auto;
+      margin-top: 10px; } }
+  @media screen and (max-width: 768px) {
+    .contenedor-seccion {
+      grid-template-columns: repeat(2, 300px);
+      margin: auto;
+      margin-top: 10px; } }
+  @media screen and (max-width: 767px) {
+    .contenedor-seccion {
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); } }
 
 .carta {
-  color: black;
-  background-color: white;
+  color: #000;
+  background-color: #fff;
   width: 270px;
   margin: 10px;
   border-radius: 15px;
   text-align: center;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   transition: all 0.25s ease;
   max-height: 399px; }
   .carta h2 {
@@ -164,7 +188,7 @@ h3 {
     color: #000; }
   .carta .btn-carta {
     background-color: #000;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 20px;
     display: block;
     text-align: center;
@@ -200,6 +224,8 @@ h3 {
 .car-6 {
   background-image: url(../img/hamburguesa_res.jpg); }
 
+/**MAPS**/
+/**MIXINS**/
 /**SECCION IMAGEN**/
 .seccion-imagen {
   margin: 4rem auto auto auto;
@@ -217,6 +243,19 @@ h3 {
   margin-left: 4rem;
   line-height: 40px;
   justify-content: flex-start; }
+  @media screen and (max-width: 768px) {
+    .texto-abajo {
+      line-height: 20px; }
+    .texto-abajo h2 {
+      font-size: 18px; }
+    .texto-abajo p {
+      margin-top: 15px;
+      font-size: 14px; } }
+  @media screen and (max-width: 1024px) {
+    .texto-abajo p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 20px; } }
 
 .btn-abajo {
   font-size: 16px;
@@ -226,13 +265,112 @@ h3 {
   margin-left: 4rem; }
   .btn-abajo:hover {
     color: #fff; }
+  @media screen and (max-width: 768px) {
+    .btn-abajo {
+      margin-top: 10rem;
+      margin-left: 4rem; } }
+  @media screen and (max-width: 425px) {
+    .btn-abajo {
+      margin-top: 14rem; } }
 
 .tst-bg {
   background: rgba(255, 255, 255, 0.05); }
 
-.button:hover {
+.button:hover, .comida a:hover {
   color: #fff; }
 
+/**MAPS**/
+/**MIXINS**/
+@media screen and (max-width: 768px) {
+  .logo-hamb {
+    display: none; } }
+
+.menu-vertical {
+  position: absolute;
+  display: none;
+  background-color: #000; }
+  .menu-vertical a:hover {
+    color: #802629; }
+
+/**Hero section**/
+.button, .comida a {
+  background-color: #000;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid #fff;
+  display: inline-block;
+  transition: all 0.25s ease; }
+  .button:hover, .comida a:hover {
+    transform: scale(1.2); }
+
+.hero-imagen {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/hamburguesa-papel-pintado-2880x1620_52.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .hero-imagen {
+      background-position: right; } }
+
+.hero-texto {
+  color: #fff;
+  text-align: center; }
+  .hero-texto h1 {
+    font-size: 50px; }
+    @media screen and (max-width: 768px) {
+      .hero-texto h1 {
+        font-size: 40px; } }
+  .hero-texto p {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+    margin-bottom: 2rem;
+    margin-top: 1rem; }
+    @media screen and (max-width: 768px) {
+      .hero-texto p {
+        font-size: 23px;
+        line-height: 31px; } }
+    @media screen and (max-width: 425px) {
+      .hero-texto p {
+        width: 290px;
+        margin: auto;
+        margin-bottom: 2rem;
+        margin-top: 1rem; } }
+
+/**footer**/
+.footer-pagina {
+  background-color: #000;
+  margin-top: 3rem;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+
+.icono {
+  position: relative;
+  bottom: 55px; }
+  .icono a {
+    color: #fff;
+    width: 50px;
+    margin: 0px 15px 0px 15px; }
+  .icono a:hover {
+    color: #080914; }
+
+.icono-texto {
+  margin-top: 10px; }
+
+.formulario-1 {
+  font-family: 'Source Code Pro', monospace;
+  margin-left: 15px; }
+
+.contenedor-iconos {
+  margin: 10px; }
+
+/**MAPS**/
+/**MIXINS**/
 /**COMIDAS**/
 .subtitulo-comida {
   color: #fff;
@@ -242,6 +380,9 @@ h3 {
   background: #ff9900;
   padding: 13px 30px;
   border-radius: 15px; }
+  @media screen and (max-width: 767px) {
+    .subtitulo-comida {
+      margin: auto; } }
 
 .comida-titulo {
   display: grid;
@@ -257,6 +398,9 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center; }
+  @media screen and (max-width: 767px) {
+    .comida-section {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); } }
 
 .comida {
   position: relative;
@@ -271,18 +415,16 @@ h3 {
     width: 25px; }
   .comida a {
     margin-top: 10px;
-    color: #ffffff;
-    background-color: #000;
-    padding: 10px 20px 10px 20px;
-    border: 2px solid #ffffff;
+    color: #fff;
     border-radius: 5px;
-    display: inline-block;
-    font-size: 17px;
-    transition: all 0.25s ease; }
+    font-size: 17px; }
   .comida a:hover {
     transform: scale(1.07);
     color: #000;
-    background: white; }
+    background: #fff; }
+  @media screen and (max-width: 767px) {
+    .comida {
+      margin: auto; } }
 
 .img-comida {
   background-color: cyan;
@@ -292,7 +434,7 @@ h3 {
   border-radius: 5px; }
 
 .money {
-  color: white;
+  color: #fff;
   font-weight: bold;
   display: inline-block;
   background-color: #f73939;
@@ -357,6 +499,8 @@ h3 {
 .l-piña {
   background-image: url(../img/jugos/jugodepiña.png); }
 
+/**MAPS**/
+/**MIXINS**/
 /**nosotros**/
 .about {
   width: 100%;
@@ -365,6 +509,16 @@ h3 {
     height: 500px;
     width: 420px;
     border-radius: 5px; }
+    @media screen and (max-width: 767px) {
+      .about img {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        padding-top: 0; } }
+    @media screen and (max-width: 991px) {
+      .about img {
+        width: 100%;
+        height: 100%; } }
 
 .about-text {
   width: 550px; }
@@ -373,15 +527,30 @@ h3 {
     font-size: 80px;
     text-transform: capitalize;
     margin-bottom: 20px; }
+    @media screen and (max-width: 767px) {
+      .about-text h1 {
+        font-size: 52px;
+        margin-bottom: 8px; } }
   .about-text p {
     color: #000;
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
     margin-bottom: 45px; }
+    @media screen and (max-width: 767px) {
+      .about-text p {
+        width: 400px;
+        margin: auto; } }
+  @media screen and (max-width: 767px) {
+    .about-text {
+      text-align: center;
+      margin: auto; } }
+  @media screen and (max-width: 991px) {
+    .about-text {
+      text-align: center; } }
 
 .main-about {
-  background: white;
+  background: #fff;
   border-radius: 5px;
   height: 560px;
   width: 1063px;
@@ -391,6 +560,19 @@ h3 {
   align-items: center;
   justify-content: space-around;
   box-shadow: 10px 10px 18px -8px #aaaaaa, -10px -10px -18px 8px #ffffff; }
+  @media screen and (max-width: 767px) {
+    .main-about {
+      display: grid;
+      grid-template-rows: repeat(2, 50%);
+      width: 100%;
+      height: 1000px;
+      margin-top: 2rem;
+      overflow: hidden;
+      height: 1150px; } }
+  @media screen and (max-width: 991px) {
+    .main-about {
+      flex-direction: column;
+      height: 1250px; } }
 
 .titulos {
   color: #000;
@@ -398,13 +580,17 @@ h3 {
   text-transform: capitalize;
   margin-bottom: 25px;
   letter-spacing: 2px; }
+  @media screen and (max-width: 767px) {
+    .titulos {
+      font-size: 20px;
+      margin-bottom: 10px; } }
 
 .span-jugos {
   color: #e3e938; }
 
 .boton-about {
   background-color: #e3e938;
-  color: white;
+  color: #fff;
   text-decoration: none;
   border: 2px solid transparent;
   font-weight: bold;
@@ -416,13 +602,21 @@ h3 {
     background: transparent;
     border: 2px solid #e3e938;
     cursor: pointer; }
+  @media screen and (max-width: 767px) {
+    .boton-about {
+      margin-top: 20px; } }
+  @media screen and (max-width: 991px) {
+    .boton-about {
+      margin-bottom: 20px; } }
 
+/**MAPS**/
+/**MIXINS**/
 /**Contacto-seccion**/
 .contacto-section {
   padding: 80px 0;
   text-align: center;
   display: flex;
-  background: white;
+  background: #fff;
   border-radius: 5px;
   width: 800px;
   margin: 2rem auto;
@@ -434,11 +628,24 @@ h3 {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 400; }
+    @media screen and (max-width: 767px) {
+      .contacto-section h1 {
+        text-align: center; } }
+  @media screen and (max-width: 767px) {
+    .contacto-section {
+      height: 100%;
+      width: calc(100% - 1rem);
+      margin: auto;
+      margin-top: 3rem; } }
 
 .contenedor-contacto {
   max-width: 690px;
   margin: auto;
   padding: 0 20px; }
+
+@media screen and (max-width: 767px) {
+  .nombre, .apellido, .numero, .email {
+    width: 100%; } }
 
 .apellido {
   width: 270px; }
@@ -456,12 +663,18 @@ h3 {
   overflow: hidden; }
 
 .dr-1:hover {
-  background: black; }
+  background: #000; }
 
 .nv-ca {
   margin: auto; }
   .nv-ca .nv-ca img {
     margin-left: 10px; }
+    @media screen and (max-width: 991px) {
+      .nv-ca .nv-ca img {
+        display: none; } }
+    @media screen and (max-width: 768px) {
+      .nv-ca .nv-ca img {
+        display: none; } }
 
 .n1 {
   margin-right: 10px; }
@@ -471,95 +684,3 @@ h3 {
 
 .n3 {
   margin-right: 10px; }
-
-/**MEDIA QUERIES**/
-@media screen and (max-width: 991px) {
-  .nv-ca img {
-    display: none; } }
-
-@media screen and (max-width: 1024px) {
-  .contenedor-seccion {
-    grid-template-columns: repeat(2, 300px);
-    margin: auto;
-    margin-top: 10px; } }
-
-@media screen and (max-width: 768px) {
-  .hero-imagen {
-    background-position: right; }
-  .hero-texto h1 {
-    font-size: 40px; }
-    .hero-texto h1 p {
-      font-size: 23px;
-      line-height: 31px; }
-  .contenedor-seccion {
-    grid-template-columns: repeat(2, 300px);
-    margin: auto;
-    margin-top: 10px; }
-  .texto-abajo {
-    line-height: 20px; }
-    .texto-abajo h2 {
-      font-size: 18px; }
-    .texto-abajo p {
-      margin-top: 15px;
-      font-size: 14px; }
-  .btn-abajo {
-    margin-top: 10rem;
-    margin-left: 4rem; }
-  .review-seccion {
-    flex-wrap: wrap; }
-  .nv-ca img {
-    display: none; } }
-
-@media screen and (max-width: 767px) {
-  .contenedor-seccion {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
-  .nav-bar {
-    flex-direction: column; }
-  .subtitulo-comida {
-    margin: auto; }
-  .comida-section {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
-  .comida {
-    margin: auto; }
-  .nombre, .apellido, .numero, .email {
-    width: 100%; }
-  .contacto-section {
-    height: 100%;
-    width: calc(100% - 1rem);
-    margin: auto;
-    margin-top: 3rem; }
-    .contacto-section h1 {
-      text-align: center; }
-  .main-about {
-    display: grid;
-    grid-template-rows: repeat(2, 50%);
-    width: 100%;
-    height: 1000px;
-    margin-top: 2rem;
-    overflow: hidden; }
-  .titulos {
-    font-size: 20px; }
-  .about img {
-    height: 100%;
-    width: 100%;
-    padding: 10px; }
-  .about-text {
-    text-align: center; }
-    .about-text h1 {
-      font-size: 55px; }
-    .about-text p {
-      width: 400px;
-      margin: auto; }
-  .boton-about {
-    margin-top: 20px; } }
-
-@media screen and (max-width: 425px) {
-  .nav-bar {
-    flex-direction: column; }
-  .hero-texto p {
-    width: 290px;
-    margin: auto;
-    margin-bottom: 2rem;
-    margin-top: 1rem; }
-  .btn-abajo {
-    margin-top: 14rem; } }
