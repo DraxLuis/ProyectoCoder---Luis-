@@ -134,6 +134,10 @@ h3 {
 .contenedor-iconos {
   margin: 10px; }
 
+@media screen and (max-width: 990px) {
+  .logo-hamb {
+    display: none; } }
+
 /**MAPS**/
 /**MIXINS**/
 .ctn-p--g {
@@ -368,6 +372,10 @@ h3 {
 
 .contenedor-iconos {
   margin: 10px; }
+
+@media screen and (max-width: 990px) {
+  .logo-hamb {
+    display: none; } }
 
 /**MAPS**/
 /**MIXINS**/
